@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout files
-        run: exit $((RANDOM % 2))
+      - name: Exit
+        run: exit 0
 
   automerge:
     runs-on: ubuntu-latest
@@ -23,4 +23,8 @@ jobs:
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      
+      - name: Auto Approve
+        uses: hmarr/auto-approve-action@5d04a5ca6da9aeb8ca9f31a5239b96fc3e003029
+          with:
+            # The GITHUB_TOKEN secret
+            github-token:  ${{secrets.GITHUB_TOKEN}}
