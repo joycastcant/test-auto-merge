@@ -4,7 +4,7 @@ on:
   pull_request:
     branches: [ main ]
   # Allows to run this workflow manually from the Actions tab
-  # https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow
+  # https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow 
   workflow_dispatch:
 
 jobs:
