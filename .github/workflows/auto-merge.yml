@@ -23,7 +23,7 @@ jobs:
     steps:
       - name: Make sure change is on holiday files only
         run: | 
-          updated_files=$(gh pr view "$PR_URL" -json files --jq '.files.[].path')
+          updated_files=$(gh pr view "$PR_URL" --json files --jq '.files.[].path')
           echo $updated_files
 
         env:
