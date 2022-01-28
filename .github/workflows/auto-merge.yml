@@ -19,8 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: 
       - random-exit
-    if: contains( github.event.pull_request.labels.*.name, 'automerge-holiday')
-
+    
     steps:
       - name: Make sure change is on holiday files only
         run: | 
